@@ -1,6 +1,9 @@
-@function get-vh($object) {
-  $vh: (1080 * 0.01) * 1px;
-  @return ($object / $vh) * 1vh;
-}
+$black: #040402;
+$green: #22C50C;
+$grey: #181818;
 
-$circe-bold: 'Circe Bold', sans-serif;
+//pushy-style
+$pushy-width: 320px;
+$pushy-min-height: 580px;
+$pushy-bg: #16181e;
+//pushy-style:end

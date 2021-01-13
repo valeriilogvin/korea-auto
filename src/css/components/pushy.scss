@@ -1,0 +1,43 @@
+button.menu-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: auto;
+  span {
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #ffffff;
+    margin-left: 30px;
+    display: block;
+    &+ span {
+      margin-top: 5px;
+    }
+  }
+}
+
+.pushy{
+  width: 400px; /* Changed the width to 400px */
+}
+
+.pushy-left{
+  transform: translate3d(-400px,0,0); /* Updated the values */
+  /* Don't forget the vendor prefixes */
+}
+
+.pushy-open-left #container,
+.pushy-open-left .push {
+  transform: translate3d(400px, 0, 0); /* Updated the values */
+}
+
+.pushy-right {
+  transform: translate3d(400px, 0, 0); /* Updated the values */
+  /* Don't forget the vendor prefixes */
+}
+
+.pushy-open-right #container,
+.pushy-open-right .push {
+  transform: translate3d(-400px, 0, 0); /* Updated the values */
+  /* Don't forget the vendor prefixes */
+}
