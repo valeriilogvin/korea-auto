@@ -1,0 +1,31 @@
+.sect2{
+  .flex-row{
+    margin: 0 -15px;
+    align-items: flex-start;
+  }
+  .text-block,
+  .youtube{
+    margin: 0 15px;
+    width: 50%;
+  }
+
+  .text{
+    padding-top: 28px;
+    span{
+      font-weight: bold;
+    }
+  }
+
+  .youtube{
+    position: relative;
+    img{
+      width: 100%;
+    }
+    .button{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+}

@@ -340,7 +340,7 @@ section {
 
 @media (max-width: 1024px) {
   .sect1 {
-    background-position-x: 40%; }
+    background: url("../img/sect1-bg-mob.jpg") top center no-repeat; }
     .sect1 h1 {
       margin-top: 60px;
       font-size: 32px;
@@ -422,6 +422,35 @@ section {
   .sect1 .city,
   .sect1 .callback {
     display: none; } }
+
+.sect2 .flex-row {
+  margin: 0 -15px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.sect2 .text-block,
+.sect2 .youtube {
+  margin: 0 15px;
+  width: 50%; }
+
+.sect2 .text {
+  padding-top: 28px; }
+  .sect2 .text span {
+    font-weight: bold; }
+
+.sect2 .youtube {
+  position: relative; }
+  .sect2 .youtube img {
+    width: 100%; }
+  .sect2 .youtube .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%); }
 
 button.menu-btn {
   background: none;
