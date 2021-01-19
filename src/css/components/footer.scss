@@ -1,0 +1,15 @@
+.footer{
+  background: #131313;
+  padding: 22px 0;
+  .container{
+    align-items: center;
+  }
+
+  .social{
+    a{
+      + a{
+        margin-left: 30px;
+      }
+    }
+  }
+}

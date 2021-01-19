@@ -1,0 +1,77 @@
+.sect11 {
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  h2 {
+    padding-bottom: 50px;
+  }
+
+  a {
+    + a {
+      padding-top: 8px;
+    }
+  }
+
+  .address {
+    padding-bottom: 23px;
+  }
+
+  .mail {
+    padding-bottom: 40px;
+  }
+
+  .work-time{
+    span{
+      font-weight: bold;
+    }
+    + .work-time{
+      padding-top: 8px;
+    }
+  }
+
+  .call-to-action {
+    padding-top: 30px;
+    .text {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 28px;
+      padding-bottom: 24px;
+    }
+  }
+
+  form {
+    margin: 0 -15px;
+
+    input,
+    button {
+      border: none;
+      outline: none;
+      margin: 0 15px;
+      width: calc(33% - 30px);
+    }
+
+    button {
+      padding: 0;
+    }
+
+    input {
+      background: rgba(247, 247, 247, 0.06);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      box-sizing: border-box;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      font-size: 18px;
+      line-height: 52px;
+      color: #FFFFFF;
+      padding: 0 20px;
+
+      &::placeholder {
+        font-size: 18px;
+        line-height: 50px;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
