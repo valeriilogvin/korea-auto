@@ -1,0 +1,42 @@
+.sect3 {
+  text-align: center;
+  background: $grey;
+
+  h2{
+    padding-bottom: 65px;
+  }
+
+  .item {
+
+    &.col-3 {
+      width: calc(25% - 30px);
+      margin: 0 15px;
+    }
+  }
+
+  .title{
+    min-height: 44px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .icon{
+    height: 45px;
+    width: 55px;
+    margin: 0 auto;
+    position: relative;
+    padding: 70px 0 50px;
+
+    svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  .text{
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

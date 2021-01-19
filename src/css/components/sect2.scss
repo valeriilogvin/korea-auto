@@ -21,11 +21,19 @@
     img{
       width: 100%;
     }
-    .button{
+    svg {
+      transition: $tr-all;
+      width: 88px;
+      height: 62px;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translateY(-50%) translateX(-50%);
+      transform: $cc;
+
+      &:hover {
+        width: 100px;
+        height: 74px;
+      }
     }
   }
 }

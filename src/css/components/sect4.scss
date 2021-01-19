@@ -1,0 +1,88 @@
+.sect4 {
+  h2 {
+    padding-bottom: 25px;
+  }
+
+  .text {
+    padding-bottom: 75px;
+  }
+
+  &-slider {
+    .left-side,
+    .right-side {
+      width: 50%;
+    }
+
+    .left-side {
+      img {
+        width: 100%;
+      }
+    }
+
+    .right-side {
+      padding-left: 120px;
+    }
+
+    .car-title {
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 44px;
+      text-transform: uppercase;
+      text-shadow: 0 20px 12px rgba(0, 0, 0, 0.02);
+      padding-bottom: 14px;
+    }
+
+    .price {
+      span {
+        font-size: 16px;
+        line-height: 20px;
+        text-shadow: 0 20px 12px rgba(0, 0, 0, 0.02);
+      }
+
+      p {
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: uppercase;
+        text-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02);
+
+      }
+    }
+
+    ul.list {
+      padding-top: 45px;
+      li {
+        font-size: 14px;
+        line-height: 30px;
+        padding: 0 20px;
+
+        &:nth-child(2n + 1) {
+          background: $grey;
+          border-radius: 15px;
+
+        }
+
+        span {
+          display: inline-block;
+
+          &:first-child {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    padding: 55px 0 15px;
+  }
+
+  .button-green{
+    margin: 0 auto;
+    padding: 0 70px;
+  }
+}

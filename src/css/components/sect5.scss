@@ -1,0 +1,63 @@
+.sect5 {
+  padding-top: 0;
+  padding-bottom: 200px;
+
+  h2 {
+    &:not(.bottom) {
+      padding-bottom: 70px;
+
+    }
+
+    &.bottom {
+      padding-top: 90px;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: underline;
+      transition: $tr-all;
+
+      &:hover {
+        color: $green-hover;
+      }
+    }
+  }
+
+  a.youtube {
+    position: relative;
+
+
+    svg {
+      transition: $tr-all;
+      width: 88px;
+      height: 62px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: $cc;
+
+      &:hover {
+        width: 100px;
+        height: 74px;
+      }
+    }
+  }
+
+  .text{
+    text-align: center;
+    padding-top: 18px;
+  }
+
+  .form{
+    padding-top: 55px;
+    form{
+      margin: 0 -15px;
+      display: flex;
+      justify-content: space-between;
+      .jq-selectbox{
+        flex: 1 1 auto;
+        margin: 0 15px;
+      }
+    }
+  }
+}

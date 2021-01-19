@@ -1,0 +1,68 @@
+.sect10 {
+  background: $grey;
+
+  h2{
+    padding-bottom: 70px;
+  }
+
+  .item {
+    display: flex;
+  }
+
+  .car-photo,
+  .data {
+    width: 50%;
+  }
+
+  .car-photo {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .data {
+    padding-left: 30px;
+    .header {
+      padding: 20px;
+      background: rgba(4, 4, 2, 0.52);
+      border-radius: 55px;
+      justify-content: flex-start;
+
+      div.text{
+        padding-left: 30px;
+      }
+    }
+    .photo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 70px;
+      }
+    }
+
+    .name{
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    .city{
+      line-height: 19px;
+      color: rgba(255, 255, 255, 0.71);
+    }
+
+    .car{
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    > .text{
+      padding: 30px 0 0 20px;
+    }
+  }
+}
