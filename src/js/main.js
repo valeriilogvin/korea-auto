@@ -113,24 +113,25 @@ $(document).ready(function () {
             let selectedBrand = li.dataset.brand,
                 $thisModels = $model_select_box_dropdown.querySelectorAll(`li[data-brand='${selectedBrand}']`)
 
-            for (let model_li of $model_select_box_dropdown_li) model_li.style.display = 'none'
-            for (let this_model_li of $thisModels) this_model_li.style.display = 'block'
+            if(selectedBrand){
+                for (let model_li of $model_select_box_dropdown_li) model_li.style.display = 'none'
+                for (let this_model_li of $thisModels) this_model_li.style.display = 'block'
 
-            $model_select_box.querySelector('.jq-selectbox__select-text').innerText = 'Модель авто'
+                $model_select_box.querySelector('.jq-selectbox__select-text').innerText = 'Модель авто'
+            }
         })
     });
 
     $model_select_box_dropdown_li.forEach(li => {
         li.addEventListener('click', () => {
-            let selectedBrand = li.dataset.brand,
-                $thisModels = $brand_select_box_dropdown.querySelector(`li[data-brand='${selectedBrand}']`),
-                $thisModelsText = $thisModels.innerText;
+            let selectedBrand = li.dataset.brand;
+
 
             console.log(selectedBrand);
-            console.log($thisModels);
-
-            $brand_select_box.querySelector('.jq-selectbox__select-text').innerText = $thisModelsText;
-
+            if(selectedBrand){
+                let $thisModels = $brand_select_box_dropdown.querySelector(`li[data-brand='${selectedBrand}']`);
+                $brand_select_box.querySelector('.jq-selectbox__select-text').innerText = $thisModels.innerText;
+            }
         })
     });
 });

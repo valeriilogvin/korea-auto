@@ -1273,7 +1273,17 @@ button.menu-btn {
           backdrop-filter: blur(30px);
   border-radius: 10px; }
   .jq-selectbox__dropdown ul {
-    padding: 17px 0; }
+    margin: 7px 0 7px 0;
+    padding: 10px 0;
+    overflow: auto; }
+    .jq-selectbox__dropdown ul::-webkit-scrollbar {
+      width: 2px; }
+    .jq-selectbox__dropdown ul::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1); }
+    .jq-selectbox__dropdown ul::-webkit-scrollbar-thumb {
+      width: 2px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 21.5px; }
   .jq-selectbox__dropdown li {
     background: none;
     font-size: 18px;
