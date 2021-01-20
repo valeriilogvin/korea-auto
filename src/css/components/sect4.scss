@@ -39,18 +39,24 @@
         text-shadow: 0 20px 12px rgba(0, 0, 0, 0.02);
       }
 
-      p {
+      .profit{
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 10px;
+      }
+
+      p.green {
         font-weight: 900;
         font-size: 36px;
         line-height: 44px;
         text-transform: uppercase;
-        text-shadow: 0px 20px 12px rgba(0, 0, 0, 0.02);
+        text-shadow: 0 20px 12px rgba(0, 0, 0, 0.02);
 
       }
     }
 
     ul.list {
-      padding-top: 45px;
+      padding-top: 30px;
       li {
         font-size: 14px;
         line-height: 30px;

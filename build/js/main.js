@@ -4,6 +4,7 @@ $(document).ready(function () {
         pane_block__sub = '.pane_block__sub',
         $pane_block__sub = $('.pane_block__sub'),
         $sect4_slider = $('.sect4-slider'),
+        $sect7_slider = $('.sect7-slider'),
         $sect10_slider = $('.sect10-slider'),
         $select = $('select'),
         prevArrow_h = '<button type="button" class="my-slick-prev-h"><svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.73682 8.30002L8.13305 13.6238C8.47462 13.8698 8.81878 14 9.10484 14C9.65789 14 10 13.5333 10 12.7522L10 1.24602C10 0.465773 9.65832 9.23804e-07 9.10657 8.75568e-07C8.82008 8.50522e-07 8.48141 0.130326 8.13909 0.377038L0.739407 5.70066C0.263535 6.04358 -2.98445e-07 6.50505 -3.41769e-07 7.00062C-0.00010815 7.49586 0.260409 7.95721 0.73682 8.30002Z" fill="white"/></svg></button>',
@@ -65,6 +66,16 @@ $(document).ready(function () {
         })
         .on('init', arrows_position('.sect10-slider', 1));
 
+    $sect7_slider
+        .slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: false,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 3,
+        });
 
     $select.styler();
 

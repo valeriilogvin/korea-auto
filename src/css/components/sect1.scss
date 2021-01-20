@@ -13,26 +13,36 @@
   }
 
   .advantages {
-    padding: 80px 0 80px;
+    padding: 60px 0 60px;
+    justify-content: flex-start;
 
     li {
+      text-align: center;
+      width: 170px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      padding-left: 65px;
       position: relative;
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
 
-      + li {
-        margin-top: 45px;
+      + li{
+        margin-left: 30px;
       }
 
+      .icon{
+        width: 40px;
+        height: 30px;
+        position: relative;
+        margin-bottom: 15px;
+      }
       svg {
         position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
       }
     }
   }
@@ -111,10 +121,6 @@
       font-size: 34px;
       line-height: 40px;
     }
-
-    .advantages {
-      padding: 60px 0 60px;
-    }
   }
 }
 
@@ -136,18 +142,6 @@
     .text {
       font-size: 16px;
       line-height: 20px;
-    }
-
-    .advantages {
-      padding: 50px 0 50px;
-
-      li {
-        font-size: 16px;
-        line-height: 20px;
-        + li {
-          margin-top: 35px;
-        }
-      }
     }
 
     .call-to-action{
@@ -198,11 +192,6 @@
       font-size: 28px;
       line-height: 36px;
       width: 100%;
-    }
-    .advantages{
-      li{
-        padding-left: 50px;
-      }
     }
 
     form{

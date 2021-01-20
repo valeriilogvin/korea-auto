@@ -10,7 +10,6 @@
     margin-right: 30px;
   }
 
-
   .city {
     font-size: 14px;
     line-height: 17px;
@@ -25,16 +24,17 @@
   }
 
   .callback {
-    text-decoration: underline;
-    font-size: 14px;
-    line-height: 17px;
-    text-transform: uppercase;
-    font-weight: 700;
+    //text-decoration: underline;
+    //font-size: 14px;
+    //line-height: 17px;
+    //text-transform: uppercase;
+    //font-weight: 700;
+    padding: 0 30px;
   }
 
   .menu {
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 40px;
     align-items: center;
     position: relative;
     height: 100%;
@@ -57,6 +57,8 @@
   }
 
   .social {
+    justify-content: flex-start;
+
     a {
       + a {
         margin-left: 25px;
@@ -68,6 +70,8 @@
 @media (max-width: 1280px) {
   .header {
     .logo{
+      margin-right: 20px;
+
       img{
         width: 70px;
       }
@@ -78,8 +82,13 @@
       line-height: 22px;
       margin-bottom: 8px;
     }
-    .menu{
-      margin-right: 60px;
+
+    .menu li + li {
+      margin-left: 30px;
+    }
+
+    .button-green{
+
     }
   }
 }
@@ -88,9 +97,6 @@
   .header{
     .menu{
       display: none;
-    }
-    .social{
-      margin-left: auto;
     }
     .menu-btn{
       display: block;
