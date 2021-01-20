@@ -12,9 +12,6 @@ $(document).ready(function () {
         prevArrow_v = '<button type="button" class="my-slick-prev-v"><svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.69998 0.73682L0.376244 8.13305C0.130212 8.47462 1.54898e-07 8.81878 1.17386e-07 9.10484C4.48624e-08 9.65789 0.466678 10 1.24784 10L12.754 10C13.5342 10 14 9.65832 14 9.10657C14 8.82008 13.8697 8.48141 13.623 8.13909L8.29934 0.739408C7.95642 0.263536 7.49495 2.91699e-08 6.99938 -3.5817e-08C6.50414 -0.000107866 6.04279 0.260409 5.69998 0.73682Z" fill="white"/></svg></button>',
         nextArrow_v = '<button type="button" class="my-slick-next-v"><svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.69998 9.26318L0.376243 1.86695C0.130212 1.52538 -1.54898e-07 1.18122 -1.17386e-07 0.895157C-4.48624e-08 0.342111 0.466678 6.11974e-08 1.24784 1.63634e-07L12.754 1.67248e-06C13.5342 1.7748e-06 14 0.341681 14 0.893434C14 1.17993 13.8697 1.51859 13.623 1.86092L8.29934 9.26059C7.95642 9.73646 7.49495 10 6.99938 10C6.50414 10.0001 6.04279 9.73959 5.69998 9.26318Z" fill="white"/></svg></button>';
 
-
-
-
     function arrows_position(parent_container, type) {
         let $parent = $(parent_container),
             $slick_prev_v = $parent.find('.my-slick-prev-v'),
@@ -96,5 +93,44 @@ $(document).ready(function () {
             $(this).parent().children(pane_block__sub).slideToggle().siblings('normal');
             $(this).parent().toggleClass("active");
         }
+    });
+    
+    /*
+    * form sect5
+    * */
+    let $brand_select_box = document.getElementById('brand-styler'),
+        $brand_select_box_dropdown = $brand_select_box.querySelector('.jq-selectbox__dropdown'),
+        $brand_select_box_dropdown_li = $brand_select_box_dropdown.querySelectorAll('li'),
+        $brand_select = document.getElementById('brand'),
+        $model_select_box = document.getElementById('model-styler'),
+        $model_select_box_dropdown = $model_select_box.querySelector('.jq-selectbox__dropdown'),
+        $model_select_box_dropdown_li = $model_select_box_dropdown.querySelectorAll('li'),
+        $model_select = document.getElementById('model'),
+        model_disabled = $model_select.hasAttribute('disabled');
+
+    $brand_select_box_dropdown_li.forEach(li => {
+        li.addEventListener('click', () => {
+            let selectedBrand = li.dataset.brand,
+                $thisModels = $model_select_box_dropdown.querySelectorAll(`li[data-brand='${selectedBrand}']`)
+
+            for (let model_li of $model_select_box_dropdown_li) model_li.style.display = 'none'
+            for (let this_model_li of $thisModels) this_model_li.style.display = 'block'
+
+            $model_select_box.querySelector('.jq-selectbox__select-text').innerText = 'Модель авто'
+        })
+    });
+
+    $model_select_box_dropdown_li.forEach(li => {
+        li.addEventListener('click', () => {
+            let selectedBrand = li.dataset.brand,
+                $thisModels = $brand_select_box_dropdown.querySelector(`li[data-brand='${selectedBrand}']`),
+                $thisModelsText = $thisModels.innerText;
+
+            console.log(selectedBrand);
+            console.log($thisModels);
+
+            $brand_select_box.querySelector('.jq-selectbox__select-text').innerText = $thisModelsText;
+
+        })
     });
 });

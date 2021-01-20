@@ -54,14 +54,16 @@
 
   .form{
     padding-top: 55px;
-    form{
       margin: 0 -15px;
       display: flex;
       justify-content: space-between;
       .jq-selectbox{
-        flex: 1 1 auto;
+        flex: 1 1 200px;
         margin: 0 15px;
-      }
+    }
+
+    .sect5-send{
+      padding: 0 55px;
     }
   }
 }

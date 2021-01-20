@@ -438,30 +438,78 @@
             <p class="text">Заполните форму ниже и получите ТОП-10 предложений под ваш бюджет прямо сейчас</p>
 
             <div class="form">
-                <form action="">
                     <select name="" id="brand">
-                        <option selected disabled value="1">Марка авто</option>
-                        <option value="1">Huindai</option>
-                        <option value="1">Kia</option>
-                        <option value="1">Daewo</option>
-                        <option value="1">SsangYong</option>
+                        <option selected disabled value="0">Марка авто</option>
+                        <option data-brand="hyundai"  value="Hyundai">Hyundai</option>
+                        <option data-brand="kia" value="Kia">Kia</option>
+                        <option data-brand="chevrolet"  value="Chevrolet">Chevrolet</option>
+                        <option data-brand="renault" value="Renault Samsung">Renault Samsung</option>
+                        <option data-brand="ssang" value="Ssang Yong">Ssang Yong</option>
                     </select>
-                    <select name="" id="model">
-                        <option selected disabled value="1">Модель авто</option>
-                        <option value="1">Huindai</option>
-                        <option value="1">Kia</option>
-                        <option value="1">Daewo</option>
-                        <option value="1">SsangYong</option>
+
+                    <select id="model">
+                        <option selected disabled value="0">Модель авто</option>
+                        <option data-brand="hyundai" value="Grandeur">Grandeur</option>
+                        <option data-brand="hyundai" value="Sonata">Sonata</option>
+                        <option data-brand="hyundai" value="Starex">Starex</option>
+                        <option data-brand="hyundai" value="Avante">Avante</option>
+                        <option data-brand="hyundai" value="Santa Fe">Santa Fe</option>
+                        <option data-brand="hyundai" value="i30">i30</option>
+                        <option data-brand="hyundai" value="i40">i40</option>
+                        <option data-brand="hyundai" value="Maxcruse">Maxcruse</option>
+                        <option data-brand="hyundai" value="Palisade">Palisade</option>
+                        <option data-brand="hyundai" value="Ionic">Ionic</option>
+                        <option data-brand="hyundai" value="Accent">Accent</option>
+                        <option data-brand="hyundai" value="Kona">Kona</option>
+                        <option data-brand="hyundai" value="Tucson">Tucson</option>
+                        <option data-brand="hyundai" value="Veloster">Veloster</option>
+
+                        <option data-brand="kia" value="Carnival">Carnival</option>
+                        <option data-brand="kia" value="Morning">Morning</option>
+                        <option data-brand="kia" value="K5">K5</option>
+                        <option data-brand="kia" value="K7">K7</option>
+                        <option data-brand="kia" value="K9">K9</option>
+                        <option data-brand="kia" value="Sorento">Sorento</option>
+                        <option data-brand="kia" value="Sportage">Sportage</option>
+                        <option data-brand="kia" value="K3">K3</option>
+                        <option data-brand="kia" value="Ray">Ray</option>
+                        <option data-brand="kia" value="Mohave">Mohave</option>
+                        <option data-brand="kia" value="Seltos">Seltos</option>
+                        <option data-brand="kia" value="Stonic">Stonic</option>
+                        <option data-brand="kia" value="Stinger">Stinger</option>
+                        <option data-brand="kia" value="Soul">Soul</option>
+                        <option data-brand="kia" value="Carens">Carens</option>
+                        <option data-brand="kia" value="Forte">Forte</option>
+                        <option data-brand="kia" value="Pride">Pride</option>
+
+                        <option data-brand="chevrolet" value="Spark">Spark</option>
+                        <option data-brand="chevrolet" value="Malibu">Malibu</option>
+                        <option data-brand="chevrolet" value="Cruze">Cruze</option>
+                        <option data-brand="chevrolet" value="Orlando">Orlando</option>
+                        <option data-brand="chevrolet" value="Aveo">Aveo</option>
+                        <option data-brand="chevrolet" value="Impala">Impala</option>
+                        <option data-brand="chevrolet" value="Camaro">Camaro</option>
+                        <option data-brand="chevrolet" value="Captiva">Captiva</option>
+                        <option data-brand="chevrolet" value="Trax">Trax</option>
+
+                        <option data-brand="renault" value="SM5">SM5</option>
+                        <option data-brand="renault" value="SM3">SM3</option>
+                        <option data-brand="renault" value="SM6">SM6</option>
+                        <option data-brand="renault" value="SM7">SM7</option>
+                        <option data-brand="renault" value="QM6">QM6</option>
+                        <option data-brand="renault" value="QM3">QM3</option>
+                        <option data-brand="renault" value="XM3">XM3</option>
+                        <option data-brand="renault" value="Tvizy">Tvizy</option>
+
+                        <option data-brand="ssang" value="Rexton">Rexton</option>
+                        <option data-brand="ssang" value="Korando">Korando</option>
+                        <option data-brand="ssang" value="Tivoli">Tivoli</option>
                     </select>
-                    <select name="" id="year">
+
+                    <select disabled name="" id="year">
                         <option selected disabled value="1">Год</option>
-                        <option value="1">Huindai</option>
-                        <option value="1">Kia</option>
-                        <option value="1">Daewo</option>
-                        <option value="1">SsangYong</option>
                     </select>
-                    <button class="button-green">Получить предложение</button>
-                </form>
+                    <a class="button-green sect5-send">Получить предложение</a>
             </div>
         </div>
     </section>
