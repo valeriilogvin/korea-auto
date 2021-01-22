@@ -18,26 +18,68 @@ button.menu-btn {
 }
 
 .pushy{
-  width: 400px; /* Changed the width to 400px */
+  width: 280px; /* Changed the width to 400px */
 }
 
 .pushy-left{
-  transform: translate3d(-400px,0,0); /* Updated the values */
+  transform: translate3d(-280px,0,0); /* Updated the values */
   /* Don't forget the vendor prefixes */
 }
 
 .pushy-open-left #container,
 .pushy-open-left .push {
-  transform: translate3d(400px, 0, 0); /* Updated the values */
+  transform: translate3d(280px, 0, 0); /* Updated the values */
 }
 
 .pushy-right {
-  transform: translate3d(400px, 0, 0); /* Updated the values */
+  transform: translate3d(280px, 0, 0); /* Updated the values */
   /* Don't forget the vendor prefixes */
 }
 
 .pushy-open-right #container,
 .pushy-open-right .push {
-  transform: translate3d(-400px, 0, 0); /* Updated the values */
+  transform: translate3d(-280px, 0, 0); /* Updated the values */
   /* Don't forget the vendor prefixes */
+}
+
+.pushy-content {
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    opacity: .6;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  ul{
+    padding-top: 15px;
+    li{
+      a{
+        padding: 15px 0;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .social {
+    margin-top: auto;
+    justify-content: flex-start;
+
+    a {
+      padding: 0;
+      + a {
+        margin-left: 25px;
+      }
+    }
+  }
 }

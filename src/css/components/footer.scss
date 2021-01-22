@@ -13,3 +13,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .footer{
+    > .flex-row{
+      flex-direction: column;
+    }
+
+    .copyright{
+      padding-top: 30px;
+    }
+  }
+}

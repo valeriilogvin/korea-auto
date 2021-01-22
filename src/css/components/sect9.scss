@@ -1,4 +1,5 @@
 .sect9 {
+  padding-top: 40px;
 
   h2 {
     padding-bottom: 14px;
@@ -46,7 +47,7 @@
     }
 
     &__header {
-      padding: 25px 30px;
+      padding: 25px 80px 25px 30px;
       font-weight: bold;
       font-size: 18px;
       line-height: 22px;
@@ -124,38 +125,51 @@
       padding-bottom: 24px;
     }
   }
+}
 
-  form {
-    margin: 0 -15px;
+@media (max-width: 1280px) {
+  .sect9 .text {
+    padding-bottom: 40px;
+  }
+  .sect9 .pane_block__header {
+    font-size: 16px;
+  }
+  .sect9 .call-to-action .text {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 400px;
+  }
+  .sect9  .call-to-action {
+    padding-top: 70px;
+  }
+}
 
-    input,
-    button {
-      border: none;
-      outline: none;
-      margin: 0 15px;
-      width: calc(33% - 30px);
+@media (max-width: 768px) {
+  .sect9 .pane_block__header {
+    padding: 15px 80px 15px 20px;
+  }
+  .sect9 .pane_block__sub {
+    padding: 0 20px;
+  }
+
+  .sect9{
+    form{
+      width: 80%;
+      margin: 0 auto;
     }
-
-    button {
-      padding: 0;
+    form input, form button {
+      width: 100%;
+      margin: 20px 0 0;
     }
-
-    input {
-      background: rgba(247, 247, 247, 0.06);
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      box-sizing: border-box;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 10px;
-      font-size: 18px;
-      line-height: 52px;
-      color: #FFFFFF;
-      padding: 0 20px;
-
-      &::placeholder {
-        font-size: 18px;
-        line-height: 50px;
-        color: #FFFFFF;
-      }
+    form button.button-green {
+      width: 100%;
+      margin: 20px 0 0;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .sect9 form{
+    width: 100%;
   }
 }

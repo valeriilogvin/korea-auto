@@ -1,5 +1,6 @@
 .sect10 {
   background: $grey;
+  padding-bottom: 90px;
 
   h2{
     padding-bottom: 70px;
@@ -63,6 +64,49 @@
 
     > .text{
       padding: 30px 0 0 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sect10 h2 {
+    padding-bottom: 50px;
+  }
+  .sect10 .car-photo{
+    width: 45%;
+  }
+  .sect10 .data {
+    width: 55%;
+  }
+  .sect10 .data .header div.text {
+    padding-left: 15px;
+  }
+  .sect10 .data .name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .sect10 .data .header {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sect10 {
+    .flex-row{
+      flex-direction: column;
+
+    }
+
+    .car-photo,
+    .data {
+      width: 100%;
+      padding: 0;
+    }
+    .data {
+      padding-top: 30px;
+      .header{
+        flex-direction: row;
+      }
     }
   }
 }

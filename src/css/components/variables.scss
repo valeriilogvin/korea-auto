@@ -1,3 +1,8 @@
+@function get-vh($object) {
+  $vh: (600 * 0.01) * 1px;
+  @return ($object / $vh) * 1vh;
+}
+
 $black: #040402;
 $green: #22C50C;
 $green-hover: #38E321;
@@ -6,9 +11,9 @@ $cc: translateY(-50%) translateX(-50%);
 $grey: #181818;
 
 //pushy-style
-$pushy-width: 320px;
-$pushy-min-height: 580px;
-$pushy-bg: #16181e;
+$pushy-width: 280px;
+$pushy-min-height: 640px;
+$pushy-bg: #020402;
 //pushy-style:end
 
 //md-modal

@@ -23,7 +23,7 @@ $(document).ready(function () {
             dots_height_h = $parent.find('.my-slick-dots-h').width(),
             position_h = dots_height_h / 2 + 10;
 
-        if(type === 0){
+        if (type === 0) {
             $slick_prev_v.css('top', `calc(50% + -${position_v}px`);
             $slick_next_v.css('top', `calc(50% + ${position_v}px`);
         } else {
@@ -46,9 +46,48 @@ $(document).ready(function () {
             adaptiveHeight: true,
             dotsClass: 'my-slick-dots-v',
             prevArrow: prevArrow_v,
-            nextArrow: nextArrow_v
-        })
-        .on('init', arrows_position('.sect4-slider', 0));
+            nextArrow: nextArrow_v,
+            responsive: [
+                {
+                    breakpoint: 1023,
+                    settings: {
+                        vertical: false,
+                        dotsClass: 'my-slick-dots-h',
+                        prevArrow: prevArrow_h,
+                        nextArrow: nextArrow_h,
+                    }
+                },
+            ]
+        });
+
+    $(window).on('load resize orientationchange', function () {
+        if (window.matchMedia('(max-width: 1024px)').matches) {
+            $sect4_slider
+                .on('init', arrows_position('.sect4-slider', 1));
+        } else {
+            $sect4_slider
+                .on('init', arrows_position('.sect4-slider', 0));
+        }
+    });
+
+    $sect7_slider
+        .slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: false,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+            ]
+        });
 
     $sect10_slider
         .slick({
@@ -62,17 +101,6 @@ $(document).ready(function () {
             nextArrow: nextArrow_h,
         })
         .on('init', arrows_position('.sect10-slider', 1));
-
-    $sect7_slider
-        .slick({
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            dots: false,
-            arrows: false,
-            speed: 300,
-            slidesToShow: 3,
-        });
 
     $select.styler();
 
@@ -94,7 +122,8 @@ $(document).ready(function () {
             $(this).parent().toggleClass("active");
         }
     });
-    
+
+
     /*
     * form sect5
     * */
@@ -113,7 +142,7 @@ $(document).ready(function () {
             let selectedBrand = li.dataset.brand,
                 $thisModels = $model_select_box_dropdown.querySelectorAll(`li[data-brand='${selectedBrand}']`)
 
-            if(selectedBrand){
+            if (selectedBrand) {
                 for (let model_li of $model_select_box_dropdown_li) model_li.style.display = 'none'
                 for (let this_model_li of $thisModels) this_model_li.style.display = 'block'
 
@@ -128,7 +157,7 @@ $(document).ready(function () {
 
 
             console.log(selectedBrand);
-            if(selectedBrand){
+            if (selectedBrand) {
                 let $thisModels = $brand_select_box_dropdown.querySelector(`li[data-brand='${selectedBrand}']`);
                 $brand_select_box.querySelector('.jq-selectbox__select-text').innerText = $thisModels.innerText;
             }

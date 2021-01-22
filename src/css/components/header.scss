@@ -67,12 +67,17 @@
   }
 }
 
+@media (max-width: 1366px) {
+  .header{
+    padding: 10px 0;
+  }
+}
 @media (max-width: 1280px) {
   .header {
     .logo{
       margin-right: 20px;
 
-      img{
+      svg{
         width: 70px;
       }
     }
@@ -111,6 +116,13 @@
     }
     .menu-btn{
       margin-left: auto;
+    }
+    .callback{
+      display: none;
+    }
+    .contact-block{
+      position: absolute;
+      top: 110px;
     }
   }
 }

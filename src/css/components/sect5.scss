@@ -25,7 +25,11 @@
 
   a.youtube {
     position: relative;
+    width: 100%;
 
+    img{
+      width: 100%;
+    }
 
     svg {
       transition: $tr-all;
@@ -43,8 +47,19 @@
     }
   }
 
+  .jq-selectbox{
+    &:nth-child(3){
+      max-width: 160px;
+    }
+  }
+
   .video-title{
     padding-top: 10px;
+    a{
+      color: $green;
+      display: inline-block;
+      text-decoration: underline;
+    }
   }
 
   .text{
@@ -64,6 +79,94 @@
 
     .sect5-send{
       padding: 0 55px;
+      margin: 0 15px;
     }
+  }
+}
+
+@media (max-width: 1366px) {
+  .sect5{
+    a.youtube{
+      margin: 0 150px;
+      width: calc(100% - 300px);
+    }
+    .video-title{
+      padding-left: 150px;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .sect5 .form{
+    margin: 0 -10px;
+  }
+  .sect5 .form .sect5-send {
+    margin: 0 10px;
+    padding: 0 30px;
+  }
+  .sect5 .form .jq-selectbox {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sect5 {
+    h2:not(.bottom) {
+      padding-bottom: 50px;
+    }
+    h2.bottom {
+      padding-top: 50px;
+    }
+    .form{
+      flex-wrap: wrap;
+      .jq-selectbox{
+        width: calc(50% - 20px);
+        flex-basis: auto;
+        &:nth-child(3) {
+          max-width: 100%;
+          margin-top: 20px;
+        }
+      }
+      .sect5-send{
+        margin-top: 20px;
+        width: calc(50% - 20px);
+        line-height: 50px;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .sect5 {
+    padding-bottom: 150px;
+
+    a.youtube {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .sect5 .video-title {
+    padding-left: 0;
+  }
+  .sect5 .form .jq-selectbox{
+    width: 100%;
+  }
+  .sect5 .form .jq-selectbox:nth-child(2) {
+    margin-top: 20px;
+  }
+  .sect5 .form .sect5-send{
+    width: 100%;
+    padding: 0;
+  }
+  .sect5 .form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sect5 .form {
+    width: 100%;
   }
 }

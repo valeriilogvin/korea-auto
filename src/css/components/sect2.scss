@@ -1,26 +1,30 @@
-.sect2{
-  .flex-row{
+.sect2 {
+  .flex-row {
     margin: 0 -15px;
     align-items: flex-start;
   }
+
   .text-block,
-  .youtube{
+  .youtube {
     margin: 0 15px;
     width: 50%;
   }
 
-  .text{
+  .text {
     padding-top: 28px;
-    span{
+
+    span {
       font-weight: bold;
     }
   }
 
-  .youtube{
+  .youtube {
     position: relative;
-    img{
+
+    img {
       width: 100%;
     }
+
     svg {
       transition: $tr-all;
       width: 88px;
@@ -34,6 +38,91 @@
         width: 100px;
         height: 74px;
       }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+
+  .sect2 {
+    .text-block {
+      width: 60%;
+    }
+
+    .youtube {
+      width: 40%;
+    }
+  }
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .sect2 {
+    .container {
+      position: relative;
+    }
+
+    h2 {
+      padding-top: 80px;
+      width: calc(100% - 350px - 30px);
+
+      br {
+        display: none;
+      }
+    }
+
+    .text-block, .sect2 .youtube {
+      width: auto;
+    }
+
+    .youtube {
+      width: 350px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+
+    .text {
+      padding-top: 105px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sect2{
+    .flex-row{
+      flex-direction: column-reverse;
+    }
+
+    .text-block{
+      padding-top: 30px;
+      width: 100%;
+
+      h2{
+
+        br{
+          display: none;
+        }
+      }
+    }
+    .youtube{
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sect2{
+    .flex-row{
+      margin: 0;
+
+    }
+    .text-block{
+      margin: 0;
+    }
+    .youtube{
+      margin: 0;
     }
   }
 }
