@@ -163,4 +163,4 @@ gulp.task('clean', async function() {
 
 
 // дефолтный таск
-gulp.task('default', gulp.parallel("clean","img","build","webserver","watch"));
+gulp.task('default', gulp.parallel("clean","img","build", "css.min", "js.min", "webserver","watch"));

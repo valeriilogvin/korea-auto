@@ -131,36 +131,123 @@ $(document).ready(function () {
         $brand_select_box_dropdown = $brand_select_box.querySelector('.jq-selectbox__dropdown'),
         $brand_select_box_dropdown_li = $brand_select_box_dropdown.querySelectorAll('li'),
         $brand_select = document.getElementById('brand'),
+
         $model_select_box = document.getElementById('model-styler'),
         $model_select_box_dropdown = $model_select_box.querySelector('.jq-selectbox__dropdown'),
         $model_select_box_dropdown_li = $model_select_box_dropdown.querySelectorAll('li'),
         $model_select = document.getElementById('model'),
-        model_disabled = $model_select.hasAttribute('disabled');
+        model_disabled = $model_select.hasAttribute('disabled'),
 
-    $brand_select_box_dropdown_li.forEach(li => {
-        li.addEventListener('click', () => {
-            let selectedBrand = li.dataset.brand,
-                $thisModels = $model_select_box_dropdown.querySelectorAll(`li[data-brand='${selectedBrand}']`)
-
-            if (selectedBrand) {
-                for (let model_li of $model_select_box_dropdown_li) model_li.style.display = 'none'
-                for (let this_model_li of $thisModels) this_model_li.style.display = 'block'
-
-                $model_select_box.querySelector('.jq-selectbox__select-text').innerText = 'Модель авто'
-            }
-        })
-    });
-
-    $model_select_box_dropdown_li.forEach(li => {
-        li.addEventListener('click', () => {
-            let selectedBrand = li.dataset.brand;
+        $year_select_box = document.getElementById('year-styler'),
+        $year_select_box_dropdown = $year_select_box.querySelector('.jq-selectbox__dropdown'),
+        $year_select_box_dropdown_li = $year_select_box_dropdown.querySelectorAll('li'),
+        $year_select = document.getElementById('year'),
+        year_disabled = $year_select.hasAttribute('disabled');
 
 
-            console.log(selectedBrand);
-            if (selectedBrand) {
-                let $thisModels = $brand_select_box_dropdown.querySelector(`li[data-brand='${selectedBrand}']`);
-                $brand_select_box.querySelector('.jq-selectbox__select-text').innerText = $thisModels.innerText;
-            }
-        })
+    function select_refresh(e, id, attr, value){
+        e.preventDefault();
+        /* делаем чекбокс неактивным */
+        $(`#${id}`).attr(attr, value)
+        /* обновляем состояние псевдочекбокса */
+            .trigger('refresh');
+    }
+
+
+    // $brand_select_box_dropdown_li.forEach(li => {
+    //     li.addEventListener('click', (e) => {
+    //         let selected_brand = li.dataset.brand,
+    //             $thisModels = $model_select_box_dropdown.querySelectorAll(`li[data-brand='${selected_brand}']`);
+    //
+    //         if (selected_brand) {
+    //
+    //             // select_refresh(e,'model', 'value', 0); // refresh select
+    //
+    //             for (let model_li of $model_select_box_dropdown_li) model_li.style.display = 'none';
+    //             for (let this_model_li of $thisModels) this_model_li.style.display = 'block';
+    //
+    //             select_refresh(e,'year', 'value', 0); // refresh select
+    //
+    //         }
+    //     })
+    // });
+
+    // $model_select_box_dropdown_li.forEach(li => {
+    //     li.addEventListener('click', () => {
+    //         let selected_brand = li.dataset.brand,
+    //             selected_year_min = li.dataset.min,
+    //             selected_year_max = li.dataset.max;
+    //
+    //         if (selected_brand) {
+    //             // console.log($thisModels);
+    //
+    //             // $brand_select_box.querySelector('.jq-selectbox__select-text').innerText = $thisModels.innerText;
+    //
+    //             $brand_select.value = selected_brand;
+    //
+    //             console.log($brand_select.value);
+    //
+    //             // select_refresh('brand'); // refresh select
+    //
+    //             year_options_disabled(selected_year_min, selected_year_max);
+    //         }
+    //     })
+    // });
+
+    function year_options_disabled(min, max) {
+
+        for (let i = 2006; i <= 2020; i++){
+            let this_option = $year_select.querySelector(`option[data-year='${i}']`);
+
+            console.log(min);
+            console.log(max);
+
+            if(i >= min && i <= max) this_option.disabled = false;
+            else this_option.disabled = true;
+        }
+
+        // select_refresh('year'); // refresh select
+    }
+
+    // $(function() {
+    //     let $brand_select = $('#brand'),
+    //         $brand_select_box = $('#brand-styler'),
+    //         $brand_select_box_dropdown = $brand_select_box.find('.jq-selectbox__dropdown'),
+    //         $brand_select_box_dropdown_li = $brand_select_box_dropdown.find('li'),
+    //
+    //         $model_select = $('#model'),
+    //         $model_select_box = $('#model-styler'),
+    //         $model_select_box_dropdown = $model_select_box.find('.jq-selectbox__dropdown'),
+    //         $model_select_box_dropdown_li = $model_select_box_dropdown.find('li'),
+    //         model_disabled = $model_select.attr('disabled');
+    //
+    //     $brand_select_box_dropdown_li.on('click', function() {
+    //         let $this = $(this),
+    //             $this_data_brand = $this.attr('data-brand'),
+    //             this_brand_option = $brand_select.find(`option[data-brand="${$this.attr('data-brand')}"]`);
+    //
+    //         console.log($this_data_brand);
+    //         console.log($model_select_box.find(`li[data-brand="${$this_data_brand}"]`));
+    //         console.log($model_select_box.find(`li:not([data-brand="${$this_data_brand}"])`));
+    //
+    //     })
+    //
+    //     $model_select_box_dropdown_li.on('click', function (e) {
+    //
+    //         e.preventDefault();
+    //
+    //         let $this = $(this);
+    //
+    //         $brand_select
+    //             .val($this.attr('data-brand'))
+    //             .trigger('refresh');
+    //     })
+    // });
+
+    // якорные ссылки
+    $("body").on('click', '[href*="#"]', function(e){
+        var fixed_offset = 0;
+        $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+        e.preventDefault();
     });
 });

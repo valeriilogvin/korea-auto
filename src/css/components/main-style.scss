@@ -24,6 +24,10 @@ img {
 
 svg {
   fill: #fff;
+  transition: all .2s ease;
+  &:hover{
+    fill: $green;
+  }
 }
 
 

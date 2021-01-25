@@ -50,8 +50,28 @@
     }
 
     li {
+      position: relative;
+
       & + li {
         margin-left: 50px;
+      }
+
+      &:after {
+        transition: opacity .2s ease;
+        opacity: 0;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #ffffff;
+        content: '';
+      }
+
+      &:hover{
+        &:after{
+          opacity: 1;
+        }
       }
     }
   }
