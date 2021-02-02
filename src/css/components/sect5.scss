@@ -14,7 +14,6 @@
 
     a {
       display: inline-block;
-      text-decoration: underline;
       transition: $tr-all;
 
       &:hover {
@@ -54,11 +53,12 @@
   }
 
   .video-title{
+    text-align: center;
     padding-top: 10px;
+    font-size: 20px;
     a{
       color: $green;
       display: inline-block;
-      text-decoration: underline;
     }
   }
 
@@ -89,9 +89,6 @@
     a.youtube{
       margin: 0 150px;
       width: calc(100% - 300px);
-    }
-    .video-title{
-      padding-left: 150px;
     }
   }
 }
@@ -145,9 +142,6 @@
       margin: 0;
       width: 100%;
     }
-  }
-  .sect5 .video-title {
-    padding-left: 0;
   }
   .sect5 .form .jq-selectbox{
     width: 100%;

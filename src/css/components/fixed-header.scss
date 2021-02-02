@@ -1,0 +1,40 @@
+.fixed-header{
+  padding: 0;
+  .header{
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    .menu{
+      &:after{
+        display: none;
+      }
+    }
+  }
+  //fixed-header
+  .position-fixed {
+    position: fixed!important;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .bs-navbar {
+    //transition: 0.3s ease;
+    //box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    background-color: rgba(0,0,0, .8);
+  }
+  //fixed-header : END
+}
+
+@media(max-width: 1000px) {
+}
+@media (max-width: 640px) {
+}
+
+@media (max-width: 380px) {
+
+}
