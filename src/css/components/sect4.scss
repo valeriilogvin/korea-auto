@@ -187,6 +187,15 @@
     font-size: 18px;
     line-height: 24px;
   }
+  .sect4-slider ul.list{
+    padding: 20px 0 65px;
+  }
+  .sect4-slider .price .profit{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
 }
 
 @media (max-width: 380px) {

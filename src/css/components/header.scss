@@ -134,15 +134,32 @@
     .social{
       display: none;
     }
+
+    .logo{
+      svg{
+        width: 55px;
+      }
+    }
+
+    .city{
+      display: none;
+    }
+
+    .tel{
+      margin: 0;
+    }
+
     .menu-btn{
       margin-left: auto;
     }
     .callback{
       display: none;
     }
-    .contact-block{
-      position: absolute;
-      top: 110px;
-    }
+  }
+}
+
+@media (max-width: 380px) {
+  .header .tel {
+    font-size: 14px;
   }
 }

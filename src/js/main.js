@@ -1,28 +1,5 @@
 $(document).ready(function () {
 
-    AOS.init({
-        // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-        initClassName: 'aos-init', // class applied after initialization
-        animatedClassName: 'aos-animate', // class applied on animation
-        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
-
-        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 120, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 400, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-    });
-
     let $pane_block__header = $('.pane_block__header'),
         pane_block__sub = '.pane_block__sub',
         $pane_block__sub = $('.pane_block__sub'),
@@ -173,118 +150,63 @@ $(document).ready(function () {
         year_disabled = $year_select.hasAttribute('disabled');
 
 
-    function select_refresh(e, id, attr, value){
-        e.preventDefault();
-        /* делаем чекбокс неактивным */
-        $(`#${id}`).attr(attr, value)
-        /* обновляем состояние псевдочекбокса */
-            .trigger('refresh');
-    }
+    // function select_refresh(e, id, attr, value){
+    //     e.preventDefault();
+    //     /* делаем чекбокс неактивным */
+    //     $(`#${id}`).attr(attr, value)
+    //     /* обновляем состояние псевдочекбокса */
+    //         .trigger('refresh');
+    // }
 
+    $(function() {
+        let $brand_select = $('#brand'),
+            $brand_select_box = $('#brand-styler'),
+            $brand_select_box_dropdown = $brand_select_box.find('.jq-selectbox__dropdown'),
+            $brand_select_box_dropdown_li = $brand_select_box_dropdown.find('li'),
 
-    // $brand_select_box_dropdown_li.forEach(li => {
-    //     li.addEventListener('click', (e) => {
-    //         let selected_brand = li.dataset.brand,
-    //             $thisModels = $model_select_box_dropdown.querySelectorAll(`li[data-brand='${selected_brand}']`);
-    //
-    //         if (selected_brand) {
-    //
-    //             // select_refresh(e,'model', 'value', 0); // refresh select
-    //
-    //             for (let model_li of $model_select_box_dropdown_li) model_li.style.display = 'none';
-    //             for (let this_model_li of $thisModels) this_model_li.style.display = 'block';
-    //
-    //             select_refresh(e,'year', 'value', 0); // refresh select
-    //
-    //         }
-    //     })
-    // });
+            $model_select = $('#model'),
+            $model_select_box = $('#model-styler'),
+            $model_select_box_dropdown = $model_select_box.find('.jq-selectbox__dropdown'),
+            $model_select_box_dropdown_li = $model_select_box_dropdown.find('li'),
+            model_disabled = $model_select.attr('disabled');
 
-    // $model_select_box_dropdown_li.forEach(li => {
-    //     li.addEventListener('click', () => {
-    //         let selected_brand = li.dataset.brand,
-    //             selected_year_min = li.dataset.min,
-    //             selected_year_max = li.dataset.max;
-    //
-    //         if (selected_brand) {
-    //             // console.log($thisModels);
-    //
-    //             // $brand_select_box.querySelector('.jq-selectbox__select-text').innerText = $thisModels.innerText;
-    //
-    //             $brand_select.value = selected_brand;
-    //
-    //             console.log($brand_select.value);
-    //
-    //             // select_refresh('brand'); // refresh select
-    //
-    //             year_options_disabled(selected_year_min, selected_year_max);
-    //         }
-    //     })
-    // });
+        $brand_select_box_dropdown_li.on('click', function() {
+            let $this = $(this),
+                $this_data_brand = $this.attr('data-brand'),
+                this_brand_option = $brand_select.find(`option[data-brand="${$this.attr('data-brand')}"]`),
+                models_li_not_this_brand = $model_select_box.find(`li:not([data-brand="${$this_data_brand}"])`),
+                models_li_this_brand = $model_select_box.find(`li[data-brand="${$this_data_brand}"]`);
 
-    function year_options_disabled(min, max) {
+            models_li_not_this_brand.css('display', 'none');
+            models_li_this_brand.css('display', 'list-item');
 
-        for (let i = 2006; i <= 2020; i++){
-            let this_option = $year_select.querySelector(`option[data-year='${i}']`);
+        })
 
-            console.log(min);
-            console.log(max);
+        $model_select_box_dropdown_li.on('click', function () {
 
-            if(i >= min && i <= max) this_option.disabled = false;
-            else this_option.disabled = true;
-        }
+            // e.preventDefault();
 
-        // select_refresh('year'); // refresh select
-    }
+            let $this = $(this);
 
-    // $(function() {
-    //     let $brand_select = $('#brand'),
-    //         $brand_select_box = $('#brand-styler'),
-    //         $brand_select_box_dropdown = $brand_select_box.find('.jq-selectbox__dropdown'),
-    //         $brand_select_box_dropdown_li = $brand_select_box_dropdown.find('li'),
-    //
-    //         $model_select = $('#model'),
-    //         $model_select_box = $('#model-styler'),
-    //         $model_select_box_dropdown = $model_select_box.find('.jq-selectbox__dropdown'),
-    //         $model_select_box_dropdown_li = $model_select_box_dropdown.find('li'),
-    //         model_disabled = $model_select.attr('disabled');
-    //
-    //     $brand_select_box_dropdown_li.on('click', function() {
-    //         let $this = $(this),
-    //             $this_data_brand = $this.attr('data-brand'),
-    //             this_brand_option = $brand_select.find(`option[data-brand="${$this.attr('data-brand')}"]`);
-    //
-    //         console.log($this_data_brand);
-    //         console.log($model_select_box.find(`li[data-brand="${$this_data_brand}"]`));
-    //         console.log($model_select_box.find(`li:not([data-brand="${$this_data_brand}"])`));
-    //
-    //     })
-    //
-    //     $model_select_box_dropdown_li.on('click', function (e) {
-    //
-    //         e.preventDefault();
-    //
-    //         let $this = $(this);
-    //
-    //         $brand_select
-    //             .val($this.attr('data-brand'))
-    //             .trigger('refresh');
-    //     })
-    // });
+            $brand_select
+                .val($this.attr('data-brand'))
+                .trigger('refresh');
+        })
+    });
 
     // якорные ссылки
     $("body").on('click', '[href*="#"]', function(e){
-        var fixed_offset = 0;
+        let fixed_offset = 0;
         $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
         e.preventDefault();
     });
 
     //Фиксированное меню
-    var navbar = document.getElementById('navbarId');
+    let navbar = document.getElementById('navbarId');
 
-    var offsetNavbar = navbar.offsetTop;
+    let offsetNavbar = navbar.offsetTop;
 
-    window.onscroll = function(e) {
+    window.onscroll = function() {
         if(window.scrollY > offsetNavbar) {
             if(!navbar.classList.contains('position-fixed')) {
                 navbar.classList.add('position-fixed');
@@ -344,4 +266,19 @@ $(document).ready(function () {
         }, 300);
 
     }
+
+    // stop video after close popup
+    let modal_iframe = $('#modal-sect2 iframe');
+    $('#modal-sect2 .md-close').on('click', function () {
+        let url = modal_iframe.attr('src');
+        // console.log(url);
+        modal_iframe.attr('src', '');
+        modal_iframe.attr('src', url);
+    });
+    $('#modal-sect2 ~ .md-overlay').on('click', function () {
+        let url = modal_iframe.attr('src');
+        // console.log(url);
+        modal_iframe.attr('src', '');
+        modal_iframe.attr('src', url);
+    });
 });
