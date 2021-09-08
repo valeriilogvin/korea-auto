@@ -34,8 +34,8 @@
 
 .my-slick-dots-v {
   top: 50%;
-  left: calc(50% + 30px);
-  transform: translateX(-50%) translateY(-50%);
+  left: 0;
+  transform: translateY(-50%);
 
   li {
     display: block;
@@ -68,10 +68,10 @@
 
   &.my-slick{
     &-prev-v{
-      left: calc(50% + 30px);
+      left: 11px;
     }
     &-next-v{
-      left: calc(50% + 30px);
+      left: 11px;
     }
     &-prev-h{
       bottom: -48px;
