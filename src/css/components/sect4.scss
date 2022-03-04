@@ -14,13 +14,18 @@
     }
 
     .left-side {
+      padding-left: 40px;
+
+      @media (max-width: 1024px) {
+        padding-left: 0;
+      }
       img {
         width: 100%;
       }
     }
 
     .right-side {
-      padding-left: 120px;
+      padding-left: 80px;
     }
 
     .car-title {

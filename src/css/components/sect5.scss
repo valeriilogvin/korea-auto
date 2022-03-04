@@ -46,12 +46,6 @@
     }
   }
 
-  .jq-selectbox{
-    &:nth-child(3){
-      max-width: 160px;
-    }
-  }
-
   .video-title{
     text-align: center;
     padding-top: 10px;
@@ -67,21 +61,6 @@
     padding-top: 18px;
   }
 
-  .form{
-    padding-top: 55px;
-      margin: 0 -15px;
-      display: flex;
-      justify-content: space-between;
-      .jq-selectbox{
-        flex: 1 1 200px;
-        margin: 0 15px;
-    }
-
-    .sect5-send{
-      padding: 0 55px;
-      margin: 0 15px;
-    }
-  }
 }
 
 @media (max-width: 1366px) {

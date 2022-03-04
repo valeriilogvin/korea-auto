@@ -249,7 +249,7 @@
                     <p class="text">
                         Наша компания предоставляет услуги по покупке и доставке автомобилей корейских автоконцернов,
                         таких, как
-                        <span>Hyundai, Kia, Renault-Samsung, Daewoo</span>.
+                        <span>Hyundai, Kia, Renault Samsung-Samsung, Daewoo</span>.
                         <br/>
                         <br/>
                         Наличие и возможность приобрести эксклюзивные модели которые выпускались для внутреннего рынка
@@ -549,95 +549,108 @@
             <h2 class="bottom text-center">Не можете определится с выбором авто?</h2>
             <p class="text">Заполните форму ниже и получите ТОП-10 предложений под ваш бюджет прямо сейчас</p>
 
-            <div class="form">
-                <select name="" id="brand">
-                    <option selected disabled value="0">Марка авто</option>
-                    <option data-brand="hyundai" value="hyundai">Hyundai</option>
-                    <option data-brand="kia" value="kia">Kia</option>
-                    <option data-brand="chevrolet" value="chevrolet">Chevrolet</option>
-                    <option data-brand="renault" value="renault">Renault Samsung</option>
-                    <option data-brand="ssang" value="ssang">Ssang Yong</option>
-                </select>
+            <div class="select-box__wrapper">
 
-                <select id="model">
-                    <option selected disabled value="0">Модель авто</option>
-                    <option data-min="2011" data-max="2020" data-brand="hyundai" value="Grandeur">Grandeur</option>
-                    <option data-min="2009" data-max="2020" data-brand="hyundai" value="Sonata">Sonata</option>
-                    <option data-min="2007" data-max="2020" data-brand="hyundai" value="Starex">Starex</option>
-                    <option data-min="2010" data-max="2020" data-brand="hyundai" value="Avante">Avante</option>
-                    <option data-min="2012" data-max="2020" data-brand="hyundai" value="Santa Fe">Santa Fe</option>
-                    <option data-min="2011" data-max="2020" data-brand="hyundai" value="i30">i30</option>
-                    <option data-min="2011" data-max="2019" data-brand="hyundai" value="i40">i40</option>
-                    <option data-min="2013" data-max="2019" data-brand="hyundai" value="Maxcruse">Maxcruse</option>
-                    <option data-min="2018" data-max="2020" data-brand="hyundai" value="Palisade">Palisade</option>
-                    <option data-min="2016" data-max="2020" data-brand="hyundai" value="Ionic">Ionic</option>
-                    <option data-min="2010" data-max="2019" data-brand="hyundai" value="Accent">Accent</option>
-                    <option data-min="2017" data-max="2020" data-brand="hyundai" value="Kona">Kona</option>
-                    <option data-min="2009" data-max="2020" data-brand="hyundai" value="Tucson">Tucson</option>
-                    <option data-min="2011" data-max="2019" data-brand="hyundai" value="Veloster">Veloster</option>
+                <div class="select-box__item">
+                    <div class="select-box__selected" data-type="mark">Марка авто</div>
+                    <div class="select-box__dropdown" data-type="mark">
+                        <ul class="select-box__dropdown--ul">
+                            <li class="select-box__dropdown--li" data-mark="Hyundai">Hyundai</li>
+                            <li class="select-box__dropdown--li" data-mark="Kia">Kia</li>
+                            <li class="select-box__dropdown--li" data-mark="Chevrolet">Chevrolet</li>
+                            <li class="select-box__dropdown--li" data-mark="Renault Samsung">Renault Samsung</li>
+                            <li class="select-box__dropdown--li" data-mark="Ssang Yong">Ssang Yong</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <option data-min="2010" data-max="2020" data-brand="kia" value="Carnival">Carnival</option>
-                    <option data-min="2011" data-max="2020" data-brand="kia" value="Morning">Morning</option>
-                    <option data-min="2010" data-max="2020" data-brand="kia" value="K5">K5</option>
-                    <option data-min="2009" data-max="2020" data-brand="kia" value="K7">K7</option>
-                    <option data-min="2010" data-max="2018" data-brand="kia" value="K9">K9</option>
-                    <option data-min="2009" data-max="2020" data-brand="kia" value="Sorento">Sorento</option>
-                    <option data-min="2010" data-max="2018" data-brand="kia" value="Sportage">Sportage</option>
-                    <option data-min="2013" data-max="2018" data-brand="kia" value="K3">K3</option>
-                    <option data-min="2011" data-max="2017" data-brand="kia" value="Ray">Ray</option>
-                    <option data-min="2007" data-max="2019" data-brand="kia" value="Mohave">Mohave</option>
-                    <option data-min="2019" data-max="2019" data-brand="kia" value="Seltos">Seltos</option>
-                    <option data-min="2017" data-max="2020" data-brand="kia" value="Stonic">Stonic</option>
-                    <option data-min="2017" data-max="2020" data-brand="kia" value="Stinger">Stinger</option>
-                    <option data-min="2008" data-max="2020" data-brand="kia" value="Soul">Soul</option>
-                    <option data-min="2006" data-max="2018" data-brand="kia" value="Carens">Carens</option>
-                    <option data-min="2008" data-max="2013" data-brand="kia" value="Forte">Forte</option>
-                    <option data-min="2011" data-max="2017" data-brand="kia" value="Pride">Pride</option>
+                <div class="select-box__item">
+                    <div class="select-box__selected" data-type="model">Модель авто</div>
+                    <div class="select-box__dropdown" data-type="model">
+                        <ul class="select-box__dropdown--ul">
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2020" data-mark="Hyundai" data-model="Grandeur">Grandeur</li>
+                            <li class="select-box__dropdown--li" data-min="2009" data-max="2020" data-mark="Hyundai" data-model="Sonata">Sonata</li>
+                            <li class="select-box__dropdown--li" data-min="2007" data-max="2020" data-mark="Hyundai" data-model="Starex">Starex</li>
+                            <li class="select-box__dropdown--li" data-min="2010" data-max="2020" data-mark="Hyundai" data-model="Avante">Avante</li>
+                            <li class="select-box__dropdown--li" data-min="2012" data-max="2020" data-mark="Hyundai" data-model="Santa Fe">Santa Fe</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2020" data-mark="Hyundai" data-model="i30">i30</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2019" data-mark="Hyundai" data-model="i40">i40</li>
+                            <li class="select-box__dropdown--li" data-min="2013" data-max="2019" data-mark="Hyundai" data-model="Maxcruse">Maxcruse</li>
+                            <li class="select-box__dropdown--li" data-min="2018" data-max="2020" data-mark="Hyundai" data-model="Palisade">Palisade</li>
+                            <li class="select-box__dropdown--li" data-min="2016" data-max="2020" data-mark="Hyundai" data-model="Ionic">Ionic</li>
+                            <li class="select-box__dropdown--li" data-min="2010" data-max="2019" data-mark="Hyundai" data-model="Accent">Accent</li>
+                            <li class="select-box__dropdown--li" data-min="2017" data-max="2020" data-mark="Hyundai" data-model="Kona">Kona</li>
+                            <li class="select-box__dropdown--li" data-min="2009" data-max="2020" data-mark="Hyundai" data-model="Tucson">Tucson</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2019" data-mark="Hyundai" data-model="Veloster">Veloster</li>
 
-                    <option data-min="2011" data-max="2018" data-brand="chevrolet" value="Spark">Spark</option>
-                    <option data-min="2011" data-max="2018" data-brand="chevrolet" value="Malibu">Malibu</option>
-                    <option data-min="2011" data-max="2017" data-brand="chevrolet" value="Cruze">Cruze</option>
-                    <option data-min="2011" data-max="2018" data-brand="chevrolet" value="Orlando">Orlando</option>
-                    <option data-min="2011" data-max="2019" data-brand="chevrolet" value="Aveo">Aveo</option>
-                    <option data-min="2015" data-max="2015" data-brand="chevrolet" value="Impala">Impala</option>
-                    <option data-min="2011" data-max="2018" data-brand="chevrolet" value="Camaro">Camaro</option>
-                    <option data-min="2011" data-max="2018" data-brand="chevrolet" value="Captiva">Captiva</option>
-                    <option data-min="2013" data-max="2016" data-brand="chevrolet" value="Trax">Trax</option>
+                            <li class="select-box__dropdown--li" data-min="2010" data-max="2020" data-mark="Kia" data-model="Carnival">Carnival</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2020" data-mark="Kia" data-model="Morning">Morning</li>
+                            <li class="select-box__dropdown--li" data-min="2010" data-max="2020" data-mark="Kia" data-model="K5">K5</li>
+                            <li class="select-box__dropdown--li" data-min="2009" data-max="2020" data-mark="Kia" data-model="K7">K7</li>
+                            <li class="select-box__dropdown--li" data-min="2010" data-max="2018" data-mark="Kia" data-model="K9">K9</li>
+                            <li class="select-box__dropdown--li" data-min="2009" data-max="2020" data-mark="Kia" data-model="Sorento">Sorento</li>
+                            <li class="select-box__dropdown--li" data-min="2010" data-max="2018" data-mark="Kia" data-model="Sportage">Sportage</li>
+                            <li class="select-box__dropdown--li" data-min="2013" data-max="2018" data-mark="Kia" data-model="K3">K3</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2017" data-mark="Kia" data-model="Ray">Ray</li>
+                            <li class="select-box__dropdown--li" data-min="2007" data-max="2019" data-mark="Kia" data-model="Mohave">Mohave</li>
+                            <li class="select-box__dropdown--li" data-min="2019" data-max="2019" data-mark="Kia" data-model="Seltos">Seltos</li>
+                            <li class="select-box__dropdown--li" data-min="2017" data-max="2020" data-mark="Kia" data-model="Stonic">Stonic</li>
+                            <li class="select-box__dropdown--li" data-min="2017" data-max="2020" data-mark="Kia" data-model="Stinger">Stinger</li>
+                            <li class="select-box__dropdown--li" data-min="2008" data-max="2020" data-mark="Kia" data-model="Soul">Soul</li>
+                            <li class="select-box__dropdown--li" data-min="2006" data-max="2018" data-mark="Kia" data-model="Carens">Carens</li>
+                            <li class="select-box__dropdown--li" data-min="2008" data-max="2013" data-mark="Kia" data-model="Forte">Forte</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2017" data-mark="Kia" data-model="Pride">Pride</li>
 
-                    <option data-min="2010" data-max="2019" data-brand="renault" value="SM5">SM5</option>
-                    <option data-min="2009" data-max="2019" data-brand="renault" value="SM3">SM3</option>
-                    <option data-min="2016" data-max="2020" data-brand="renault" value="SM6">SM6</option>
-                    <option data-min="2011" data-max="2019" data-brand="renault" value="SM7">SM7</option>
-                    <option data-min="2016" data-max="2019" data-brand="renault" value="QM6">QM6</option>
-                    <option data-min="2013" data-max="2019" data-brand="renault" value="QM3">QM3</option>
-                    <option data-min="2020" data-max="2020" data-brand="renault" value="XM3">XM3</option>
-                    <option data-min="2017" data-max="2017" data-brand="renault" value="Tvizy">Tvizy</option>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2018" data-mark="Chevrolet" data-model="Spark">Spark</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2018" data-mark="Chevrolet" data-model="Malibu">Malibu</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2017" data-mark="Chevrolet" data-model="Cruze">Cruze</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2018" data-mark="Chevrolet" data-model="Orlando">Orlando</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2019" data-mark="Chevrolet" data-model="Aveo">Aveo</li>
+                            <li class="select-box__dropdown--li" data-min="2015" data-max="2015" data-mark="Chevrolet" data-model="Impala">Impala</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2018" data-mark="Chevrolet" data-model="Camaro">Camaro</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2018" data-mark="Chevrolet" data-model="Captiva">Captiva</li>
+                            <li class="select-box__dropdown--li" data-min="2013" data-max="2016" data-mark="Chevrolet" data-model="Trax">Trax</li>
 
-                    <option data-min="2012" data-max="2020" data-brand="ssang" value="Rexton">Rexton</option>
-                    <option data-min="2011" data-max="2019" data-brand="ssang" value="Korando">Korando</option>
-                    <option data-min="2016" data-max="2019" data-brand="ssang" value="Tivoli">Tivoli</option>
-                </select>
+                            <li class="select-box__dropdown--li" data-min="2010" data-max="2019" data-mark="Renault Samsung Samsung" data-model="SM5">SM5</li>
+                            <li class="select-box__dropdown--li" data-min="2009" data-max="2019" data-mark="Renault Samsung" data-model="SM3">SM3</li>
+                            <li class="select-box__dropdown--li" data-min="2016" data-max="2020" data-mark="Renault Samsung" data-model="SM6">SM6</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2019" data-mark="Renault Samsung" data-model="SM7">SM7</li>
+                            <li class="select-box__dropdown--li" data-min="2016" data-max="2019" data-mark="Renault Samsung" data-model="QM6">QM6</li>
+                            <li class="select-box__dropdown--li" data-min="2013" data-max="2019" data-mark="Renault Samsung" data-model="QM3">QM3</li>
+                            <li class="select-box__dropdown--li" data-min="2020" data-max="2020" data-mark="Renault Samsung" data-model="XM3">XM3</li>
+                            <li class="select-box__dropdown--li" data-min="2017" data-max="2017" data-mark="Renault Samsung" data-model="Tvizy">Tvizy</li>
 
-                <select name="" id="year">
-                    <option selected disabled value="0">Год</option>
-                    <option data-year="2006" value="2006">2006</option>
-                    <option data-year="2007" value="2007">2007</option>
-                    <option data-year="2008" value="2008">2008</option>
-                    <option data-year="2009" value="2009">2009</option>
-                    <option data-year="2010" value="2010">2010</option>
-                    <option data-year="2011" value="2011">2011</option>
-                    <option data-year="2012" value="2012">2012</option>
-                    <option data-year="2013" value="2013">2013</option>
-                    <option data-year="2014" value="2014">2014</option>
-                    <option data-year="2015" value="2015">2015</option>
-                    <option data-year="2016" value="2016">2016</option>
-                    <option data-year="2017" value="2017">2017</option>
-                    <option data-year="2018" value="2018">2018</option>
-                    <option data-year="2019" value="2019">2019</option>
-                    <option data-year="2020" value="2020">2020</option>
+                            <li class="select-box__dropdown--li" data-min="2012" data-max="2020" data-mark="Ssang Yong" data-model="Rexton">Rexton</li>
+                            <li class="select-box__dropdown--li" data-min="2011" data-max="2019" data-mark="Ssang Yong" data-model="Korando">Korando</li>
+                            <li class="select-box__dropdown--li" data-min="2016" data-max="2019" data-mark="Ssang Yong" data-model="Tivoli">Tivoli</li>
+                        </ul>
+                    </div>
+                </div>
 
-                </select>
-                <a data-modal="modal-form" class="md-trigger button-green sect5-send">Получить предложение</a>
+                <div class="select-box__item year">
+                    <div class="select-box__selected" data-type="year">Год</div>
+                    <div class="select-box__dropdown" data-type="year">
+                        <ul class="select-box__dropdown--ul">
+                            <li class="select-box__dropdown--li" data-year="2006">2006</li>
+                            <li class="select-box__dropdown--li" data-year="2007">2007</li>
+                            <li class="select-box__dropdown--li" data-year="2008">2008</li>
+                            <li class="select-box__dropdown--li" data-year="2009">2009</li>
+                            <li class="select-box__dropdown--li" data-year="2010">2010</li>
+                            <li class="select-box__dropdown--li" data-year="2011">2011</li>
+                            <li class="select-box__dropdown--li" data-year="2012">2012</li>
+                            <li class="select-box__dropdown--li" data-year="2013">2013</li>
+                            <li class="select-box__dropdown--li" data-year="2014">2014</li>
+                            <li class="select-box__dropdown--li" data-year="2015">2015</li>
+                            <li class="select-box__dropdown--li" data-year="2016">2016</li>
+                            <li class="select-box__dropdown--li" data-year="2017">2017</li>
+                            <li class="select-box__dropdown--li" data-year="2018">2018</li>
+                            <li class="select-box__dropdown--li" data-year="2019">2019</li>
+                            <li class="select-box__dropdown--li" data-year="2020">2020</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a data-modal="modal-form" class="md-trigger button-green select-box__btn">Получить предложение</a>
             </div>
         </div>
     </section>
@@ -1153,6 +1166,7 @@
 <div class="site-overlay"></div>
 
 
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/libs.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
